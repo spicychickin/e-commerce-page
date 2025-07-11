@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/navbar.jsx';
 import CartDropdown from './components/CartDropdown.jsx';
 import ProductInfo from './components/ProductInfo.jsx';
+import ProductLightBox from './components/ProductLightBox.jsx';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <CartDropdown />
       <ProductInfo />
+      <ProductLightBox />
     </div>
   );
 }

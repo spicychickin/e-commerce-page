@@ -48,6 +48,16 @@ const ProductInfo = () => {
                     className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
                 />
             </div>
+            <div
+            className={`w-28 h-28 p-1 rounded-xl cursor-pointer 
+            ${activeIndex === 3 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}
+            >
+                <img
+                    src={thumbnail4}
+                    alt="Product Thumbnail 4"
+                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
+                />
+            </div>
             </div>
         </section>
         <section className="flex-1">

@@ -27,6 +27,17 @@ const ProductInfo = () => {
                     onClick={ () => setActiveIndex(0)}
                 />
             </div>
+            <div
+            className={`w-28 h-28 p-1 rounded-xl cursor-pointer border-2
+            ${activeIndex === 1 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}
+            >
+                <img
+                    src={thumbnail2}
+                    alt="Product Thumbnail 2"
+                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
+                    onClick={ () => setActiveIndex(0)}
+                />
+            </div>
             </div>
         </section>
         <section className="flex-1">

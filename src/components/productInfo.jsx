@@ -18,33 +18,12 @@ const ProductInfo = () => {
             </div>
         </section>
         <section className="flex-1">
-        <div className="text-left uppercase text-gray-500 tracking-widest text-xs font-bold mb-6">
+            <div className="text-left uppercase text-gray-500 tracking-widest text-xs font-bold mb-6">
                 SNEAKERS COMPANY
             </div>
             <h1 className="text-left text-5xl font-bold leading-tight mb-6">
                 Fall Limited Edition Sneakers
             </h1>
-            <p className="text-gray-500 mb-8 text-base text-left">
-            These low-profile sneakers are your perfect casual wear companion. 
-            Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
-            </p>
-            <div className="mb-2 flex items-center gap-6">
-                <span className="text-2xl font-bold">$125.00</span>
-                <span className="bg-black text-white text-m font-bold px-3 py-1 rounded">50%</span>
-            </div>
-            <div className="flex mb-8 line-through text-gray-400 font-bold text-lg">$250.00</div>
-            <div className="flex gap-6 items-center">
-                <div className="flex items-center bg-gray-100 rounded-lg px-6 py-3 gap-6 font-bold">
-                    <button className="text-orange-400 text-lg">-</button>
-                    <span>0</span>
-                    <button className="text-orange-400 text-lg">+</button>
-                </div>
-                <button className="bg-orange-400 text-gray-950 hover:bg-orange-300 text-white rounded-xl px-16
-                py-4 font-bold flex items-center gap-2 shadow-lg shadow-orange-500/70 transition">
-                    <img src={ addToCart } alt="Add to Cart Icon" className="h-5 w-5" />
-                    Add to Cart
-                </button>
-            </div>
 
         </section>
         

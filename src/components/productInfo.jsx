@@ -39,6 +39,11 @@ const ProductInfo = () => {
                     <span>0</span>
                     <button className="text-orange-400 text-lg">+</button>
                 </div>
+                <button className="bg-orange-400 text-gray-950 hover:bg-orange-300 text-white rounded-xl px-16
+                py-4 font-bold flex items-center gap-2 shadow-lg shadow-orange-500/70 transition">
+                    <img src={ addToCart } alt="Add to Cart Icon" className="h-5 w-5" />
+                    Add to Cart
+                </button>
             </div>
 
         </section>

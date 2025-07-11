@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { product, cart, addToCart, thumbnail1, thumbnail2, thumbnail3, thumbnail4 } from '../assets/images';
 
+const thumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4];
+
 const ProductInfo = () => {
     const [mainImage, setMainImage] = useState(product);
     const [activeIndex, setActiveIndex] = useState(0)
@@ -13,51 +15,22 @@ const ProductInfo = () => {
                 alt="Main Product"
                 className="rounded-xl w-full aspect-square object-cover"
             />
-            
             <div className="flex gap-6 mt-6">
-            </div>
-            <div className="flex gap-6 mt-6">
-            <div
-            className={`w-28 h-28 p-1 rounded-xl cursor-pointer 
-            ${activeIndex === 0 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}>
+            {thumbnails.map((thumb, idx) => (
+                <div 
+                key={idx}
+                className={`w-28 h-28 rounded-xl cursor-pointer border-4 border-transparent 
+                hover:border-orange-400 transition group`}
+                onClick={() => setActiveIndex(idx)}
+                >
                 <img
-                    src={thumbnail1}
-                    alt="Product Thumbnail 1"
-                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
-                    onClick={ () => setActiveIndex(0)}
+                    src={thumb}
+                    alt={`Product Thumbnail ${idx + 1}`}
+                    className="w-full h-full object-cover rounded-lg 
+                    transition duration-200 hover:opacity-70"
                 />
             </div>
-            <div
-            className={`w-28 h-28 p-1 rounded-xl cursor-pointer border-2
-            ${activeIndex === 1 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}
-            >
-                <img
-                    src={thumbnail2}
-                    alt="Product Thumbnail 2"
-                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
-                    onClick={ () => setActiveIndex(0)}
-                />
-            </div>
-            <div
-            className={`w-28 h-28 p-1 rounded-xl cursor-pointer 
-            ${activeIndex === 2 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}
-            >
-                <img
-                    src={thumbnail3}
-                    alt="Product Thumbnail 3"
-                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
-                />
-            </div>
-            <div
-            className={`w-28 h-28 p-1 rounded-xl cursor-pointer 
-            ${activeIndex === 3 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}
-            >
-                <img
-                    src={thumbnail4}
-                    alt="Product Thumbnail 4"
-                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
-                />
-            </div>
+            ))}
             </div>
         </section>
         <section className="flex-1">

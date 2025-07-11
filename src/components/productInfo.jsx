@@ -24,6 +24,15 @@ const ProductInfo = () => {
             <h1 className="text-left text-5xl font-bold leading-tight mb-6">
                 Fall Limited Edition Sneakers
             </h1>
+            <p className="text-gray-500 mb-8 text-base text-left">
+            These low-profile sneakers are your perfect casual wear companion. 
+            Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <div className="mb-2 flex items-center gap-6">
+                <span className="text-2xl font-bold">$125.00</span>
+                <span className="bg-black text-white text-m font-bold px-3 py-1 rounded">50%</span>
+            </div>
+            <div className="flex mb-8 line-through text-gray-400 font-bold text-lg">$250.00</div>
 
         </section>
         

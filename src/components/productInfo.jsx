@@ -16,6 +16,18 @@ const ProductInfo = () => {
             
             <div className="flex gap-6 mt-6">
             </div>
+            <div className="flex gap-6 mt-6">
+            <div
+            className={`w-28 h-28 p-1 rounded-xl cursor-pointer 
+            ${activeIndex === 0 ? "border-orange-400" : "border-transparent"} hover:border-orange-300`}>
+                <img
+                    src={thumbnail1}
+                    alt="Product Thumbnail 1"
+                    className="w-full h-full object-cover rounded-lg transition duration-200 hover:opacity-70"
+                    onClick={ () => setActiveIndex(0)}
+                />
+            </div>
+            </div>
         </section>
         <section className="flex-1">
             <div className="text-left uppercase text-gray-500 tracking-widest text-xs font-bold mb-6">

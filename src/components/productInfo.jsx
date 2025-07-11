@@ -17,7 +17,20 @@ const ProductInfo = () => {
             <div className="flex gap-6 mt-6">
             </div>
         </section>
-            
+        <section className="flex-1">
+        <div className="text-left uppercase text-gray-500 tracking-widest text-xs font-bold mb-6">
+                SNEAKERS COMPANY
+            </div>
+            <h1 className="text-left text-5xl font-bold leading-tight mb-6">
+                Fall Limited Edition Sneakers
+            </h1>
+            <p className="text-gray-500 mb-8 text-base text-left">
+            These low-profile sneakers are your perfect casual wear companion. 
+            Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+
+        </section>
+        
         
     </main>
 

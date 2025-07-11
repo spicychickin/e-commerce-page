@@ -33,7 +33,18 @@ const ProductInfo = () => {
                 <span className="bg-black text-white text-m font-bold px-3 py-1 rounded">50%</span>
             </div>
             <div className="flex mb-8 line-through text-gray-400 font-bold text-lg">$250.00</div>
-
+            <div className="flex gap-6 items-center">
+                <div className="flex items-center bg-gray-100 rounded-lg px-6 py-3 gap-6 font-bold">
+                    <button className="text-orange-400 text-lg">-</button>
+                    <span>0</span>
+                    <button className="text-orange-400 text-lg">+</button>
+                </div>
+                <button className="bg-orange-400 text-gray-950 hover:bg-orange-300 text-white rounded-xl px-16
+                py-4 font-bold flex items-center gap-2 shadow-lg shadow-orange-500/70 transition">
+                    <img src={ addToCart } alt="Add to Cart Icon" className="h-5 w-5" />
+                    Add to Cart
+                </button>
+            </div>
         </section>
         
         

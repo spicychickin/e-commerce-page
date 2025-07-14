@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import { mainImg1, mainImg2, mainImg3, mainImg4, cart, addToCart, thumbnail1, thumbnail2, thumbnail3, thumbnail4 } from '../assets/images';
+import { main } from "framer-motion/client";
+import ProductLightBox from "./ProductLightBox";
 
 const mainImages = [mainImg1, mainImg2, mainImg3, mainImg4];
 const thumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4];
 
 const ProductInfo = () => {
     const [activeIndex, setActiveIndex] = useState(0)
+    const [isLightBoxOpen, setIsLightBoxOpen] = useState(false);
 
     return (
+    <>
     <main className="max-w-6xl mx-auto px-8 flex gap-16 py-16 items-center">
         <section className="flex-1 flex flex-col items-center">
             <img
                 src={mainImages[activeIndex]}
                 alt={`Main Product ${activeIndex + 1}`}
-                className="rounded-xl w-full aspect-square object-cover"
+                className="rounded-xl w-full aspect-square object-cover cursor-pointer"
+                onClick={() => setIsLightBoxOpen(true)}
             />
             <div className="flex gap-6 mt-6">
             {thumbnails.map((thumb, idx) => (
@@ -21,7 +26,8 @@ const ProductInfo = () => {
                 key={idx}
                 className={`w-28 h-28 rounded-xl cursor-pointer border-4 border-transparent 
                 hover:border-orange-400 transition group`}
-                onClick={() => setActiveIndex(idx)}
+                onClick={() =>
+                setActiveIndex(idx)}
                 >
                 <img
                     src={thumb}
@@ -65,7 +71,15 @@ const ProductInfo = () => {
         
         
     </main>
-
+    <ProductLightBox
+    isOpen={isLightBoxOpen}
+    onClose={() => setIsLightBoxOpen(false)}
+    activeIndex={activeIndex}
+    setActiveIndex={setActiveIndex}
+    images={mainImages}
+    thumbnails={thumbnails}
+     />
+</>
     )
 }
 

@@ -10,6 +10,9 @@ import thumbnail1 from './image-product-1-thumbnail.jpg'
 import thumbnail2 from './image-product-2-thumbnail.jpg'
 import thumbnail3 from './image-product-3-thumbnail.jpg'
 import thumbnail4 from './image-product-4-thumbnail.jpg'
+import close from './close.svg'
+import leftArrow from './left-arrow.svg';
+import rightArrow from './right-arrow.svg';
 
 
-export { logo, cart, avatar, mainImg1, mainImg2, mainImg3, mainImg4, addToCart, thumbnail1, thumbnail2, thumbnail3, thumbnail4 };
+export { logo, cart, close, avatar, leftArrow, rightArrow, mainImg1, mainImg2, mainImg3, mainImg4, addToCart, thumbnail1, thumbnail2, thumbnail3, thumbnail4 };

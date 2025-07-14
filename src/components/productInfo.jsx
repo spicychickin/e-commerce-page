@@ -33,7 +33,7 @@ const ProductInfo = () => {
                     src={thumb}
                     alt={`Product Thumbnail ${idx + 1}`}
                     className="w-full h-full object-cover rounded-lg 
-                    transition duration-200 hover:opacity-70"
+                    transition duration-200 hover:opacity-30"
                 />
             </div>
             ))}
